@@ -10,7 +10,7 @@ dim(m)
 x1<-list(3.3, "R Studio", m)
 x1
 df1<-data.frame("ID"=2, "Age"=22, "Name"="ABC")
-df1<-rbind("ID"=1, "Age"=23, "Name"="xxy" )
+df1<-cbind(df1, State=c("MP"))
 df1
 str(df1)
 df1$Name
