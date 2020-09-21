@@ -9,19 +9,19 @@ summary(mtcars)
 head(mtcars)
 
 #To select the following columns and (-) to hide the column
-s <- select(mtcars, hp, mpg, cyl, -am)
+s <- select(mtcars, hp, mpg, cyl, - am)
 head(s)
 
 #To select columns with numeric indexes
-s2 <- select(mtcars,c(3:5))
+s2 <- select(mtcars, c(3:5))
 head(s2)
 
 #To filter automatic and manual transmission cars 1 is for automatic and 0 for manual
-f <- filter(mtcars, am == 1 )
+f <- filter(mtcars, am == 1)
 head(f)
 
 #To filter cars with 6 or more cylinders and automatic transmission
-f2 <- filter(mtcars, cyl >= 6, am==1)
+f2 <- filter(mtcars, cyl >= 6, am == 1)
 head(f2)
 
 #filter with selected elements
@@ -44,13 +44,13 @@ arr2 <- arrange(newCol, desc(mpg))
 head(arr2)
 
 #To arrange cars in ascending  order by miles per gallon
-head(mtcars[order(mtcars$mpg), ])
+head(mtcars[order(mtcars$mpg),])
 
 #To arrange cars in descending  order by miles per gallon
-head(mtcars[order(mtcars$mpg, decreasing = TRUE), ])
+head(mtcars[order(mtcars$mpg, decreasing = TRUE),])
 
 #To arrange cars in order with cylinder, v shape and miles per gallon
-mtcars[with(mtcars, order(cyl, vs, mpg)), ]
+mtcars[with(mtcars, order(cyl, vs, mpg)),]
 
 # summarize to find out (mean, median, mode, etc.)
 summarised <- summarise(arr, Mean.HorsePower = mean(hp))
@@ -66,4 +66,4 @@ head(grouped)
 mtcars %>% filter(am == 1, hp > 200)
 
 #To find mean miles per gallon by automatic transmission
-mtcars  %>% group_by(gear) %>% summarise(Mean.MPG = mean(mpg))
+mtcars %>% group_by(gear) %>% summarise(Mean.MPG = mean(mpg))

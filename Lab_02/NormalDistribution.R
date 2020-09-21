@@ -1,8 +1,8 @@
 # Create a sample of 50 numbers which are normally distributed.
 normalVector <- 1:1000
 observations <- sample(normalVector, 50);
-y <- runif(observations, min=2, max=49)    # define the range between 2 and 49
-x <- rnorm(observations, mean=25, sd=3)    # provide our own mean and standard deviation
+y <- runif(observations, min = 2, max = 49) # define the range between 2 and 49
+x <- rnorm(observations, mean = 25, sd = 3) # provide our own mean and standard deviation
 
 hist(x, main = "Normal DIstribution")
 hist(y, main = "Uniform DIstribution")
