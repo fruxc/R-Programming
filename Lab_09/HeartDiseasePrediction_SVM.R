@@ -96,7 +96,7 @@ svmPrediction <- predict(svmModel, testData2)
 
 #probability of no heart disease-finding probabilities value
 svmPredictionprob <- predict(svmModel, testData2, type = 'prob')[2]
-
+svmPredictionprob
 #generating a confusion matrix
 ConfMatrixPrediction <- confusionMatrix(svmPrediction, na.omit(testData2)$num)
 ConfMatrixPrediction$table
